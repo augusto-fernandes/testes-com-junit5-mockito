@@ -11,5 +11,4 @@ public class TestesUnitariosApplication {
 		SpringApplication.run(TestesUnitariosApplication.class, args);
 	}
 
-    User user = new User(1,"Augusto", "Augusto@gmail.com","123" );
 }
