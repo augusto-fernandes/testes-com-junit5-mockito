@@ -1,9 +1,9 @@
 package com.example.augusto.api.services;
 
-import com.example.augusto.api.domain.Usuario;
+import com.example.augusto.api.domain.User;
 
 public interface UserService {
 
 
-    Usuario findById(Integer id);
+    User findById(Integer id);
 }

@@ -1,6 +1,6 @@
 package com.example.augusto.api.resources;
 
-import com.example.augusto.api.domain.Usuario;
+import com.example.augusto.api.domain.User;
 import com.example.augusto.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class UserResource {
     private UserService service;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Usuario> findById(@PathVariable Integer id){
+    public ResponseEntity<User> findById(@PathVariable Integer id){
         return ResponseEntity.ok().body(service.findById(id));
     }
 }

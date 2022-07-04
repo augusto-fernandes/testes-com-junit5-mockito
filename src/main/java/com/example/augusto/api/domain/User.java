@@ -9,7 +9,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 
 @Entity
-public class Usuario {
+@Table(name="`user`")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

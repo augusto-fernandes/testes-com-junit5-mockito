@@ -1,6 +1,6 @@
 package com.example.augusto.api.services.impl;
 
-import com.example.augusto.api.domain.Usuario;
+import com.example.augusto.api.domain.User;
 import com.example.augusto.api.repositories.UserRepository;
 import com.example.augusto.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ public class UserServiceImpl implements UserService {
     private UserRepository repository;
 
     @Override
-    public Usuario findById(Integer id) {
-        Optional<Usuario> obj = repository.findById(id);
+    public User findById(Integer id) {
+        Optional<User> obj = repository.findById(id);
         return obj.orElse(null);
     }
 }
