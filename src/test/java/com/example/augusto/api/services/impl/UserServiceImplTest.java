@@ -90,11 +90,10 @@ class UserServiceImplTest {
         assertEquals(NAME, response.get(INDEX).getName());
         assertEquals(EMAIL, response.get(INDEX).getEmail());
         assertEquals(PASSWORD, response.get(INDEX).getPassword());
-
     }
 
     @Test
-    void whenCreateTheReturnSucces() {
+    void whenCreateTheReturnSuccess() {
         when(repository.save(any())).thenReturn(user);
 
         User response = service.create(userDTO);
@@ -118,11 +117,20 @@ class UserServiceImplTest {
             assertEquals(DataIntegratyViolationException.class, ex.getClass());
             assertEquals("E-mail já cadastrado no sistema", ex.getMessage());
         }
-
     }
 
     @Test
-    void update() {
+    void whenUpdateTheReturnSuccess() {
+        when(repository.save(any())).thenReturn(user);
+
+        User response = service.update(userDTO);
+
+        assertNotNull(response);
+        assertEquals(User.class, response.getClass());
+        assertEquals(ID, response.getId());
+        assertEquals(NAME, response.getName());
+        assertEquals(EMAIL, response.getEmail());
+        assertEquals(PASSWORD, response.getPassword());
     }
 
     @Test
