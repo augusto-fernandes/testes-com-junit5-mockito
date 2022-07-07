@@ -1,8 +1,8 @@
 package com.example.augusto.api;
 
-import com.example.augusto.api.domain.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Lazy;
 
 @SpringBootApplication
 public class TestesUnitariosApplication {
@@ -11,5 +11,4 @@ public class TestesUnitariosApplication {
 		SpringApplication.run(TestesUnitariosApplication.class, args);
 	}
 
-    User user = new User(1,"Augusto", "Augusto@gmail.com","123" );
 }
