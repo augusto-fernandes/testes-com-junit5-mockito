@@ -1,6 +1,5 @@
 package com.example.augusto.api.resources;
 
-import com.example.augusto.api.domain.User;
 import com.example.augusto.api.domain.dto.UserDTO;
 import com.example.augusto.api.services.UserService;
 import org.modelmapper.ModelMapper;
