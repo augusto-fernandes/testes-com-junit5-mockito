@@ -1,6 +1,5 @@
 package com.example.augusto.api.resources;
 
-import com.example.augusto.api.domain.User;
 import com.example.augusto.api.domain.dto.UserDTO;
 import com.example.augusto.api.services.UserService;
 import org.modelmapper.ModelMapper;
@@ -31,8 +30,7 @@ public class UserResource {
 
     @GetMapping
     public ResponseEntity<List<UserDTO>> findAll(){
-        return ResponseEntity.ok()
-                .body(service.findAll()
+        return ResponseEntity.ok().body(service.findAll()
                         .stream().map(x-> mapper.map(x, UserDTO.class)).collect(Collectors.toList()));
     }
 
