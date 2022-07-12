@@ -10,7 +10,7 @@ import lombok.Setter;
 import javax.persistence.Column;
 @Getter @Setter
 @AllArgsConstructor
-@NoArgsConstructor
+
 public class UserDTO {
 
 
