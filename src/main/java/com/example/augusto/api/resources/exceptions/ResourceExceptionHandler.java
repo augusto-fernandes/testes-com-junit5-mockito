@@ -1,6 +1,5 @@
 package com.example.augusto.api.resources.exceptions;
 
-import com.example.augusto.api.services.exceptions.DataIntegratyViolationException;
 import com.example.augusto.api.services.exceptions.ObjectNotFoundException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
