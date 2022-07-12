@@ -2,6 +2,7 @@ package com.example.augusto.api.resources.exceptions;
 
 import com.example.augusto.api.services.exceptions.DataIntegratyViolationException;
 import com.example.augusto.api.services.exceptions.ObjectNotFoundException;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,9 +24,9 @@ public class ResourceExceptionHandler {
 
     }
 
-    @ExceptionHandler(DataIntegratyViolationException.class)
-    public ResponseEntity<StandardError>dataIntegratyViolationException
-            (DataIntegratyViolationException ex, HttpServletRequest request){
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<StandardError>dataIntegrityViolationException
+            (DataIntegrityViolationException ex, HttpServletRequest request){
         StandardError error = new StandardError(LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value(),
                 ex.getMessage(),
